@@ -17,7 +17,7 @@ const steps = [
     icon: Truck,
     title: "Get it delivered",
     description: "Order sustainably with zero inventory waste.",
-    detail: "Made-to-order fulfillment means no excess stock and minimal environmental impact."
+    detail: "Post Fulfillment Pipeline means no excess stock and minimal environmental impact."
   }
 ];
 

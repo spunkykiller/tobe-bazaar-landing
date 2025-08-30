@@ -5,11 +5,11 @@ import { Search, Sparkles } from 'lucide-react';
 import heroImage from '@/assets/hero-bg.jpg';
 
 const typingTexts = [
-  "Batman Hoodie",
-  "Floral T-shirt", 
-  "Abstract Phone Case",
-  "Custom Sneakers",
-  "Vintage Poster"
+  "Fix my AC before 5 pm",
+  "Best Biryani in city",
+  "Abstract Phone case",
+  "Batman hoodie",
+  "Floral T shirt"
 ];
 
 export const HeroSection = () => {
@@ -73,7 +73,7 @@ export const HeroSection = () => {
           {/* Main Headlines */}
           <div className="space-y-4">
             <h1 className="text-6xl md:text-8xl font-poppins font-bold gradient-text leading-tight">
-              Anything & Everything. All at One Place. Just Ask For It.
+              The One Bazaar for Everything
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-inter">
               Meet TOBE: your desires, instantly shoppable in natural language.
