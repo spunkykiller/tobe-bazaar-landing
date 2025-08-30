@@ -4,6 +4,7 @@ import { FeaturesSection } from '@/components/FeaturesSection';
 import { ImpactSection } from '@/components/ImpactSection';
 import { FutureVisionSection } from '@/components/FutureVisionSection';
 import { CTASection } from '@/components/CTASection';
+import { ImpactStrip } from '@/components/ImpactStrip';
 import { Footer } from '@/components/Footer';
 
 const Index = () => {
@@ -15,6 +16,7 @@ const Index = () => {
       <ImpactSection />
       <FutureVisionSection />
       <CTASection />
+      <ImpactStrip />
       <Footer />
     </div>
   );

@@ -48,6 +48,9 @@ export const Footer = () => {
               <p className="text-muted-foreground mt-2">
                 The One Bazaar for Everything
               </p>
+              <p className="text-xs text-muted-foreground mt-1">
+                WNE3 Technologies Private Limited
+              </p>
             </div>
             
             {/* Social Links */}
@@ -90,7 +93,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border/50 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm">
-            © 2024 TOBE. All rights reserved.
+            © {new Date().getFullYear()} WNE3 Technologies Private Limited. All rights reserved.
           </p>
           <p className="text-muted-foreground text-sm mt-4 sm:mt-0">
             Built with 💚 for sustainable commerce

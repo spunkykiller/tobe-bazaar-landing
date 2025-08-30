@@ -3,21 +3,21 @@ import { MessageSquare, Sparkles, Truck } from 'lucide-react';
 const steps = [
   {
     icon: MessageSquare,
-    title: "Type Your Idea",
-    description: "Describe what you want in natural language.",
-    detail: "Just tell us what you're imagining - no browsing through endless catalogs."
+    title: "Just ask for it",
+    description: "Describe anything in natural language.",
+    detail: "Skip categories and filters—tell TOBE what you want."
   },
   {
     icon: Sparkles,
-    title: "AI Generates Designs",
-    description: "See instant, unique product options.",
-    detail: "Our AI creates personalized designs tailored to your exact specifications."
+    title: "Your desires, instantly shoppable",
+    description: "See unique product options in seconds.",
+    detail: "TOBE creates personalized designs and mockups tailored to your request."
   },
   {
     icon: Truck,
-    title: "Get It Delivered",
-    description: "Order sustainably with zero waste.",
-    detail: "Made-to-order production ensures no excess inventory and minimal environmental impact."
+    title: "Get it delivered",
+    description: "Order sustainably with zero inventory waste.",
+    detail: "Made-to-order fulfillment means no excess stock and minimal environmental impact."
   }
 ];
 

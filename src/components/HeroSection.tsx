@@ -73,10 +73,10 @@ export const HeroSection = () => {
           {/* Main Headlines */}
           <div className="space-y-4">
             <h1 className="text-6xl md:text-8xl font-poppins font-bold gradient-text leading-tight">
-              The One Bazaar for Everything
+              Anything & Everything. All at One Place. Just Ask For It.
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-inter">
-              Turn your ideas into real products instantly with AI-powered generative commerce.
+              Meet TOBE: your desires, instantly shoppable in natural language.
             </p>
           </div>
 
@@ -99,7 +99,7 @@ export const HeroSection = () => {
             </div>
             <p className="text-sm text-muted-foreground mt-2">
               <Sparkles className="inline h-4 w-4 mr-1" />
-              AI is generating designs for: <span className="text-primary font-medium typing-cursor">{currentText}</span>
+              TOBE is generating designs for: <span className="text-primary font-medium typing-cursor">{currentText}</span>
             </p>
           </div>
 
@@ -109,6 +109,15 @@ export const HeroSection = () => {
               size="lg" 
               variant="hero"
               className="glow-primary"
+              onClick={() => {
+                // Track outbound click event
+                if (typeof window !== 'undefined' && (window as any).gtag) {
+                  (window as any).gtag('event', 'cta_start_creating_click', {
+                    event_label: 'wne3.com'
+                  });
+                }
+                window.open('https://www.wne3.com/', '_blank', 'noopener,noreferrer');
+              }}
             >
               Start Creating
             </Button>
