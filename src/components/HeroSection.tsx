@@ -12,11 +12,21 @@ const typingTexts = [
   "Floral T shirt"
 ];
 
+const slidingTexts = [
+  { prefix: "TOBE is unlocking choices for:", text: "Guitar lessons near me" },
+  { prefix: "TOBE is creating options for:", text: "custom hoodie with my startup logo" },
+  { prefix: "TOBE is curating results for:", text: "Best Biryani in city" },
+  { prefix: "TOBE is connecting you to:", text: "a yoga trainer near me tomorrow morning" },
+  { prefix: "TOBE is finding solutions for:", text: "Fix my AC before 5" }
+];
+
 export const HeroSection = () => {
   const [currentText, setCurrentText] = useState('');
   const [textIndex, setTextIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [slidingIndex, setSlidingIndex] = useState(0);
+  const [slidingVisible, setSlidingVisible] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -42,6 +52,18 @@ export const HeroSection = () => {
 
     return () => clearTimeout(timer);
   }, [charIndex, isDeleting, textIndex]);
+
+  useEffect(() => {
+    const slidingTimer = setInterval(() => {
+      setSlidingVisible(false);
+      setTimeout(() => {
+        setSlidingIndex((prev) => (prev + 1) % slidingTexts.length);
+        setSlidingVisible(true);
+      }, 300);
+    }, 3000);
+
+    return () => clearInterval(slidingTimer);
+  }, []);
 
   const scrollToHowItWorks = () => {
     document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
@@ -84,7 +106,7 @@ export const HeroSection = () => {
           <div className="max-w-2xl mx-auto">
             <div className="relative">
               <Input
-                placeholder={`Try "${currentText}"`}
+                placeholder={`Ask "${currentText}"`}
                 className="h-16 text-lg pl-6 pr-16 bg-card/50 border-primary/20 backdrop-blur-sm text-foreground placeholder:text-muted-foreground typing-cursor"
                 value=""
                 readOnly
@@ -97,9 +119,9 @@ export const HeroSection = () => {
                 <Search className="h-5 w-5" />
               </Button>
             </div>
-            <p className="text-sm text-muted-foreground mt-2">
+            <p className={`text-sm text-muted-foreground mt-2 transition-opacity duration-300 ${slidingVisible ? 'opacity-100' : 'opacity-0'}`}>
               <Sparkles className="inline h-4 w-4 mr-1" />
-              TOBE is generating designs for: <span className="text-primary font-medium typing-cursor">{currentText}</span>
+              {slidingTexts[slidingIndex].prefix} <span className="text-primary font-medium">{slidingTexts[slidingIndex].text}</span>
             </p>
           </div>
 
