@@ -60,16 +60,12 @@ export const FutureVisionSection = () => {
 
           {/* Mobile App Mockup */}
           <div className="relative">
-            <div className="relative max-w-sm mx-auto">
+            <div className="relative max-w-md mx-auto">
               <img 
                 src={tobeAppImage} 
                 alt="TOBE Super App interface showing Creations, Marketplace, Everything Store, History, Community, Payments, ONDC, Utilities, and Settings features"
                 className="w-full h-auto rounded-3xl glow-primary"
               />
-              
-              {/* Floating elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-secondary rounded-full float-animation opacity-80" style={{ animationDelay: '1s' }} />
-              <div className="absolute -bottom-6 -left-6 w-6 h-6 bg-accent rounded-full float-animation opacity-60" style={{ animationDelay: '3s' }} />
             </div>
           </div>
         </div>
