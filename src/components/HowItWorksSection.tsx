@@ -23,13 +23,13 @@ const steps = [
 
 export const HowItWorksSection = () => {
   return (
-    <section id="how-it-works" className="py-24 px-4">
-      <div className="max-w-6xl mx-auto">
+    <section id="how-it-works" className="section-padding section-light">
+      <div className="container-clean">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-poppins font-bold gradient-text mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             How It Works
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Three simple steps to transform your imagination into reality
           </p>
         </div>
@@ -38,34 +38,34 @@ export const HowItWorksSection = () => {
           {steps.map((step, index) => (
             <div
               key={index}
-              className="relative group hover-scale"
+              className="relative group hover-lift"
             >
-              <div className="card-gradient rounded-3xl p-8 text-center h-full border border-border/50 hover:border-primary/30 transition-all duration-300">
+              <div className="card-elevated p-8 text-center h-full">
                 {/* Step number */}
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full gradient-primary text-primary-foreground font-poppins font-bold text-xl mb-6">
+                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary text-primary-foreground font-bold text-lg mb-6">
                   {index + 1}
                 </div>
 
                 {/* Icon */}
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-primary/10 mb-6">
-                  <step.icon className="h-10 w-10 text-primary" />
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 mb-6">
+                  <step.icon className="h-8 w-8 text-primary" />
                 </div>
 
                 {/* Content */}
-                <h3 className="text-2xl font-poppins font-bold text-foreground mb-4">
+                <h3 className="text-2xl font-semibold text-foreground mb-4">
                   {step.title}
                 </h3>
-                <p className="text-lg text-primary mb-4">
+                <p className="text-lg text-primary mb-4 font-medium">
                   {step.description}
                 </p>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground leading-relaxed">
                   {step.detail}
                 </p>
               </div>
 
               {/* Connecting line */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-primary to-secondary transform -translate-y-1/2 z-10" />
+                <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-0.5 bg-border transform -translate-y-1/2 z-10" />
               )}
             </div>
           ))}
