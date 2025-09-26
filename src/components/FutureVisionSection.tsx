@@ -60,7 +60,7 @@ export const FutureVisionSection = () => {
 
           {/* Mobile App Mockup */}
           <div className="relative">
-            <div className="relative max-w-md mx-auto">
+            <div className="relative max-w-lg mx-auto">
               <img 
                 src={tobeAppImage} 
                 alt="TOBE Super App interface showing Creations, Marketplace, Everything Store, History, Community, Payments, ONDC, Utilities, and Settings features"
