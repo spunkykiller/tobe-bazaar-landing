@@ -146,7 +146,7 @@ export const HeroSection = () => {
             <Button 
               size="lg" 
               variant="heroSecondary"
-              onClick={scrollToHowItWorks}
+              onClick={() => window.open('https://yourstory.com/companies/wne3', '_blank', 'noopener,noreferrer')}
             >
               Learn More
             </Button>
