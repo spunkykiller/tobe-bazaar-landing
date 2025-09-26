@@ -48,8 +48,8 @@ export const ImpactStrip = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="section-padding section-light border-t border-border">
-      <div className="container-clean">
+    <section ref={sectionRef} className="py-16 px-4 border-t border-border/50">
+      <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-3 gap-8">
           {impactData.map((impact, index) => (
             <div
@@ -60,8 +60,8 @@ export const ImpactStrip = () => {
                   : 'translate-y-8 opacity-0'
               }`}
             >
-              <div className="card-clean p-6 h-full hover-lift">
-                <h3 className="text-xl font-semibold text-primary mb-4">
+              <div className="card-gradient rounded-2xl p-6 border border-border/50 h-full">
+                <h3 className="text-xl font-poppins font-bold gradient-text mb-4">
                   {impact.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
