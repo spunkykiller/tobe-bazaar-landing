@@ -47,14 +47,14 @@
     --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(270 95% 75%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(120 100% 50%) 0%, hsl(180 100% 50%) 100%);
 
-    /* Shadows */
-    --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.3);
-    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.3);
-    --shadow-intense: 0 0 60px hsl(217 91% 60% / 0.5);
+    /* Shadows - subtle and minimal */
+    --shadow-subtle: 0 1px 3px 0 hsl(0 0% 0% / 0.1), 0 1px 2px 0 hsl(0 0% 0% / 0.06);
+    --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.06);
+    --shadow-hover: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -2px hsl(0 0% 0% / 0.05);
 
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* Animations - smooth and minimal */
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-colors: color, background-color, border-color 0.2s ease;
 
     --sidebar-background: 0 0% 98%;
 
@@ -152,33 +152,31 @@
 }
 
 @layer components {
-  /* Hero gradient background */
-  .hero-gradient {
-    background: var(--gradient-hero);
+  /* Flat card styles */
+  .card-flat {
+    @apply bg-card border border-border rounded-xl shadow-sm;
   }
 
-  /* Card gradient */
-  .card-gradient {
-    background: var(--gradient-card);
+  .card-flat-hover {
+    @apply hover:shadow-md hover:border-border/80 transition-all duration-200;
   }
 
-  /* Primary gradient */
-  .gradient-primary {
-    background: var(--gradient-primary);
+  /* Button flat styles */
+  .btn-flat {
+    @apply rounded-lg font-medium transition-colors duration-200;
   }
 
-  /* Accent gradient */
-  .gradient-accent {
-    background: var(--gradient-accent);
+  /* Hover effects - minimal and clean */
+  .hover-lift {
+    @apply hover:shadow-md transition-shadow duration-200;
   }
 
-  /* Glow effects */
-  .glow-primary {
-    box-shadow: var(--shadow-glow);
+  .hover-scale-subtle {
+    @apply hover:scale-[1.02] transition-transform duration-200;
   }
 
-  .glow-intense {
-    box-shadow: var(--shadow-intense);
+  .hover-opacity {
+    @apply hover:opacity-90 transition-opacity duration-200;
   }
 
   /* Typing animation */
@@ -208,18 +206,18 @@
 
   /* Gradient text */
   .gradient-text {
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  /* Hover scale */
+  /* Subtle hover scale - replaces heavy scaling */
   .hover-scale {
-    transition: var(--transition-smooth);
+    transition: transform 0.2s ease-out;
   }
   
   .hover-scale:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
 }
