@@ -72,7 +72,7 @@ export const ImpactSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 px-4 relative overflow-hidden">
+    <section ref={sectionRef} className="py-24 px-4 relative overflow-hidden space-gradient-alt space-particles">
       {/* Background */}
       <div 
         className="absolute inset-0 opacity-20"

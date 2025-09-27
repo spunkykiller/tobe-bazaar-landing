@@ -2,7 +2,7 @@ import supportersBanner from '@/assets/supporters-banner.png';
 
 export const SupportersSection = () => {
   return (
-    <section className="py-16 px-4 bg-background">
+    <section className="py-16 px-4 space-gradient-alt space-particles-dense relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="flex justify-center">
           <img 

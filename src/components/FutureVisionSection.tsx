@@ -21,7 +21,7 @@ const appFeatures = [
 
 export const FutureVisionSection = () => {
   return (
-    <section className="py-24 px-4">
+    <section className="py-24 px-4 space-gradient space-particles relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           

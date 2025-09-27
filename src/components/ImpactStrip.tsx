@@ -48,7 +48,7 @@ export const ImpactStrip = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-16 px-4 border-t border-border/50">
+    <section ref={sectionRef} className="py-16 px-4 border-t border-border/50 space-gradient space-particles relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-3 gap-8">
           {impactData.map((impact, index) => (

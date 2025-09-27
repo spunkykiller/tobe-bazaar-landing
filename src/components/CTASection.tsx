@@ -3,7 +3,7 @@ import { ArrowRight, Users } from 'lucide-react';
 
 export const CTASection = () => {
   return (
-    <section className="py-24 px-4">
+    <section className="py-24 px-4 space-gradient-light space-particles-dense relative overflow-hidden">
       <div className="max-w-4xl mx-auto text-center">
         <div className="card-gradient rounded-3xl p-12 border border-primary/20 glow-primary">
           

@@ -23,7 +23,7 @@ const steps = [
 
 export const HowItWorksSection = () => {
   return (
-    <section id="how-it-works" className="py-24 px-4">
+    <section id="how-it-works" className="py-24 px-4 space-gradient space-particles relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-poppins font-bold gradient-text mb-6">
