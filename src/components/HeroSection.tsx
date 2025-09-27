@@ -70,34 +70,27 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center section-light">
       {/* Background */}
       <div 
-        className="absolute inset-0 hero-gradient"
+        className="absolute inset-0 bg-muted/30"
         style={{
           backgroundImage: `url(${heroImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundBlendMode: 'multiply'
+          backgroundBlendMode: 'overlay'
         }}
       />
-      
-      {/* Animated particles */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-2 h-2 bg-primary rounded-full float-animation opacity-60" style={{ animationDelay: '0s' }} />
-        <div className="absolute top-40 right-20 w-3 h-3 bg-secondary rounded-full float-animation opacity-40" style={{ animationDelay: '2s' }} />
-        <div className="absolute bottom-32 left-32 w-1 h-1 bg-accent rounded-full float-animation opacity-80" style={{ animationDelay: '4s' }} />
-      </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
-        <div className="space-y-8">
+      <div className="relative z-10 container-clean section-padding text-center">
+        <div className="space-y-12">
           {/* Main Headlines */}
-          <div className="space-y-4">
-            <h1 className="text-6xl md:text-8xl font-poppins font-bold gradient-text leading-tight">
+          <div className="space-y-6">
+            <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
               The One Bazaar for Everything
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-inter">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Meet TOBE: your desires, instantly shoppable in natural language.
             </p>
           </div>
@@ -107,30 +100,28 @@ export const HeroSection = () => {
             <div className="relative">
               <Input
                 placeholder={`Ask "${currentText}"`}
-                className="h-16 text-lg pl-6 pr-16 bg-card/50 border-primary/20 backdrop-blur-sm text-foreground placeholder:text-muted-foreground typing-cursor"
+                className="h-16 text-lg pl-6 pr-16 bg-card border-border text-foreground placeholder:text-muted-foreground typing-cursor shadow-sm"
                 value=""
                 readOnly
               />
               <Button 
                 size="sm" 
-                variant="hero"
-                className="absolute right-2 top-2 h-12 w-12 p-0"
+                className="absolute right-2 top-2 h-12 w-12 p-0 bg-primary hover:bg-primary/90"
               >
                 <Search className="h-5 w-5" />
               </Button>
             </div>
-            <p className={`text-sm text-muted-foreground mt-2 transition-opacity duration-300 ${slidingVisible ? 'opacity-100' : 'opacity-0'}`}>
-              <Sparkles className="inline h-4 w-4 mr-1" />
+            <p className={`text-sm text-muted-foreground mt-4 transition-opacity duration-300 ${slidingVisible ? 'opacity-100' : 'opacity-0'}`}>
+              <Sparkles className="inline h-4 w-4 mr-2 text-primary" />
               {slidingTexts[slidingIndex].prefix} <span className="text-primary font-medium">{slidingTexts[slidingIndex].text}</span>
             </p>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Button 
               size="lg" 
-              variant="hero"
-              className="glow-primary"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-medium hover-lift"
               onClick={() => {
                 // Track outbound click event
                 if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -145,7 +136,8 @@ export const HeroSection = () => {
             </Button>
             <Button 
               size="lg" 
-              variant="heroSecondary"
+              variant="outline"
+              className="border-border text-foreground hover:bg-muted px-8 py-4 text-lg font-medium"
               onClick={() => window.open('https://yourstory.com/companies/wne3', '_blank', 'noopener,noreferrer')}
             >
               Learn More
