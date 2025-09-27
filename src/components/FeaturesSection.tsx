@@ -29,13 +29,13 @@ const features = [
 
 export const FeaturesSection = () => {
   return (
-    <section className="section-padding section-muted">
-      <div className="container-clean">
+    <section className="py-24 px-4">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-4xl md:text-6xl font-poppins font-bold gradient-text mb-6">
             Key Features & Benefits
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Revolutionizing commerce with AI-powered personalization and sustainable practices
           </p>
         </div>
@@ -44,23 +44,23 @@ export const FeaturesSection = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group hover-lift cursor-pointer"
+              className="group hover-scale cursor-pointer"
             >
-              <div className="card-clean p-8 text-center h-full">
+              <div className="card-gradient rounded-3xl p-8 text-center h-full border border-border/50 hover:border-primary/30 transition-all duration-300 hover:glow-primary">
                 
                 {/* Icon */}
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-primary text-primary-foreground mb-6 group-hover:scale-105 transition-transform duration-200">
-                  <feature.icon className="h-8 w-8" />
+                <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl gradient-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="h-10 w-10 text-primary-foreground" />
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-semibold text-foreground mb-4">
+                <h3 className="text-xl font-poppins font-bold text-foreground mb-4">
                   {feature.title}
                 </h3>
                 <p className="text-primary mb-4 font-medium">
                   {feature.description}
                 </p>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground">
                   {feature.detail}
                 </p>
               </div>

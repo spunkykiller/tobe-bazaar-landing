@@ -21,32 +21,32 @@ const appFeatures = [
 
 export const FutureVisionSection = () => {
   return (
-    <section className="section-padding section-muted">
-      <div className="container-clean">
+    <section className="py-24 px-4">
+      <div className="max-w-6xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
           {/* Content */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              <h2 className="text-4xl md:text-6xl font-poppins font-bold gradient-text mb-6">
                 One Platform. Infinite Possibilities.
               </h2>
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-xl text-muted-foreground mb-8">
                 TOBE is just the beginning. We're building the ultimate commerce super app powered by ONDC.
               </p>
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-6">
               {appFeatures.map((feature, index) => (
                 <div 
                   key={index}
-                  className="flex items-center space-x-4 p-6 card-clean hover-lift"
+                  className="flex items-center space-x-4 p-4 rounded-2xl card-gradient border border-border/50 hover:border-primary/30 transition-all duration-300"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary flex items-center justify-center">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl gradient-primary flex items-center justify-center">
                     <feature.icon className="h-6 w-6 text-primary-foreground" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg text-foreground mb-1">
+                    <h3 className="font-poppins font-bold text-lg text-foreground">
                       {feature.title}
                     </h3>
                     <p className="text-muted-foreground">
@@ -64,7 +64,7 @@ export const FutureVisionSection = () => {
               <img 
                 src={tobeAppImage} 
                 alt="TOBE Super App interface showing Creations, Marketplace, Everything Store, History, Community, Payments, ONDC, Utilities, and Settings features"
-                className="w-full h-auto rounded-2xl shadow-lg"
+                className="w-full h-auto rounded-3xl glow-primary"
               />
             </div>
           </div>

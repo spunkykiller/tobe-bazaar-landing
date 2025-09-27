@@ -44,7 +44,7 @@ const AnimatedCounter = ({ value, suffix, isVisible }: { value: number; suffix: 
   }, [isVisible, value]);
 
   return (
-    <span className="text-4xl md:text-6xl font-bold text-primary">
+    <span className="text-4xl md:text-6xl font-poppins font-bold gradient-text">
       {count}{suffix}
     </span>
   );
@@ -72,23 +72,24 @@ export const ImpactSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="section-padding section-dark relative overflow-hidden">
+    <section ref={sectionRef} className="py-24 px-4 relative overflow-hidden">
       {/* Background */}
       <div 
-        className="absolute inset-0 opacity-10"
+        className="absolute inset-0 opacity-20"
         style={{
           backgroundImage: `url(${sustainabilityImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/50 to-background/80" />
 
-      <div className="relative z-10 container-clean text-center">
+      <div className="relative z-10 max-w-6xl mx-auto text-center">
         <div className="mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-background mb-6">
+          <h2 className="text-4xl md:text-6xl font-poppins font-bold gradient-text mb-6">
             Sustainable Commerce. Scalable Commerce.
           </h2>
-          <p className="text-xl text-background/80 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Our impact goes beyond individual products to reshape entire industries
           </p>
         </div>
@@ -103,11 +104,18 @@ export const ImpactSection = () => {
                   isVisible={isVisible}
                 />
               </div>
-              <p className="text-lg text-background/70">
+              <p className="text-lg text-muted-foreground">
                 {stat.label}
               </p>
             </div>
           ))}
+        </div>
+
+        {/* Visual elements */}
+        <div className="mt-16 relative">
+          <div className="absolute top-10 left-10 w-4 h-4 bg-accent rounded-full float-animation opacity-60" style={{ animationDelay: '1s' }} />
+          <div className="absolute top-20 right-16 w-6 h-6 bg-secondary rounded-full float-animation opacity-40" style={{ animationDelay: '3s' }} />
+          <div className="absolute bottom-10 left-20 w-2 h-2 bg-primary rounded-full float-animation opacity-80" style={{ animationDelay: '5s' }} />
         </div>
       </div>
     </section>
