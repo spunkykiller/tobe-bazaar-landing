@@ -22,6 +22,24 @@ export default {
 				'poppins': ['Poppins', 'sans-serif'],
 				'inter': ['Inter', 'sans-serif'],
 			},
+			letterSpacing: {
+				'tighter': '-0.025em',
+				'tight-sm': '-0.02em',
+				'tight-xs': '-0.015em',
+				'tight-xxs': '-0.01em',
+			},
+			fontSize: {
+				'6xl': ['3.75rem', { lineHeight: '1.1', letterSpacing: '-0.025em' }],
+				'5xl': ['3rem', { lineHeight: '1.1', letterSpacing: '-0.025em' }],
+				'4xl': ['2.25rem', { lineHeight: '1.2', letterSpacing: '-0.02em' }],
+				'3xl': ['1.875rem', { lineHeight: '1.2', letterSpacing: '-0.02em' }],
+				'2xl': ['1.5rem', { lineHeight: '1.3', letterSpacing: '-0.015em' }],
+				'xl': ['1.25rem', { lineHeight: '1.4', letterSpacing: '-0.015em' }],
+			},
+			spacing: {
+				'section': '6rem',
+				'section-sm': '4rem',
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

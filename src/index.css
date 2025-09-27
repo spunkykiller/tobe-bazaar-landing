@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -118,7 +118,36 @@
   }
 
   body {
-    @apply bg-background text-foreground font-inter;
+    @apply bg-background text-foreground font-poppins;
+  }
+
+  /* Typography hierarchy */
+  h1 {
+    @apply text-5xl md:text-6xl font-semibold font-poppins leading-tight tracking-tight;
+    letter-spacing: -0.025em;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-semibold font-poppins leading-tight tracking-tight;
+    letter-spacing: -0.02em;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl font-medium font-poppins leading-snug tracking-tight;
+    letter-spacing: -0.015em;
+  }
+
+  h4 {
+    @apply text-lg md:text-xl font-medium font-poppins leading-snug;
+    letter-spacing: -0.01em;
+  }
+
+  p {
+    @apply font-poppins font-normal leading-relaxed;
+  }
+
+  .text-large {
+    @apply text-lg md:text-xl font-medium leading-relaxed;
   }
 }
 
