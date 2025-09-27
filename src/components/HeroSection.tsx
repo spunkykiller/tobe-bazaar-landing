@@ -70,24 +70,17 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center space-gradient space-particles overflow-hidden">
       {/* Background */}
       <div 
-        className="absolute inset-0 hero-gradient"
+        className="absolute inset-0 opacity-20"
         style={{
           backgroundImage: `url(${heroImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundBlendMode: 'multiply'
         }}
       />
-      
-      {/* Animated particles */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-2 h-2 bg-primary rounded-full float-animation opacity-60" style={{ animationDelay: '0s' }} />
-        <div className="absolute top-40 right-20 w-3 h-3 bg-secondary rounded-full float-animation opacity-40" style={{ animationDelay: '2s' }} />
-        <div className="absolute bottom-32 left-32 w-1 h-1 bg-accent rounded-full float-animation opacity-80" style={{ animationDelay: '4s' }} />
-      </div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/20" />
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
