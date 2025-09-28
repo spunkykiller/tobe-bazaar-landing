@@ -50,6 +50,13 @@ export const ImpactStrip = () => {
   return (
     <section ref={sectionRef} className="py-16 px-4 border-t border-border/50 space-gradient space-particles relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
+        {/* Section Heading */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-poppins font-bold gradient-text">
+            Innovating for a Greener Planet
+          </h2>
+        </div>
+        
         <div className="grid md:grid-cols-3 gap-8">
           {impactData.map((impact, index) => (
             <div

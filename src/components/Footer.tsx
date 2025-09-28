@@ -51,6 +51,9 @@ export const Footer = () => {
               <p className="text-xs text-muted-foreground mt-1">
                 WNE3 Technologies Private Limited
               </p>
+              <p className="text-xs text-muted-foreground mt-1">
+                info@wne3.com
+              </p>
             </div>
             
             {/* Social Links */}

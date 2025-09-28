@@ -64,7 +64,7 @@ export const FutureVisionSection = () => {
               <img 
                 src={tobeAppImage} 
                 alt="TOBE Super App interface showing Creations, Marketplace, Everything Store, History, Community, Payments, ONDC, Utilities, and Settings features"
-                className="w-full h-auto rounded-3xl glow-primary"
+                className="w-full h-auto rounded-3xl shadow-2xl shadow-primary/20 glow-primary"
               />
             </div>
           </div>
