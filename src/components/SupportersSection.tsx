@@ -8,8 +8,7 @@ export const SupportersSection = () => {
           <img 
             src={supportersBanner} 
             alt="WNE3 is supported by NVIDIA Inception Program, Microsoft for Startups Founders Hub, IIM Field, MongoDB Startup Accelerator, Google Cloud for Startups, and Ecell IIT Patna - Empowering the next generation of innovators"
-            className="w-full max-w-none h-auto object-cover"
-            style={{ minHeight: '400px' }}
+            className="w-full max-w-full h-auto object-cover"
           />
         </div>
       </div>
