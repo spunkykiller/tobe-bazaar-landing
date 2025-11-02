@@ -1,4 +1,8 @@
 import { Clock, Palette, Leaf } from 'lucide-react';
+import mockup1 from '@/assets/tobe-mockup-1.jpg';
+import mockup2 from '@/assets/tobe-mockup-2.jpg';
+import mockup3 from '@/assets/tobe-mockup-3.jpg';
+import mockup4 from '@/assets/tobe-mockup-4.jpg';
 
 export const Phase1Section = () => {
   const features = [
@@ -30,7 +34,7 @@ export const Phase1Section = () => {
             From Search to Design
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Type what you imagine — "modern abstract phone case" — and TOBE instantly generates production-ready designs and purchase flows. Our AI transforms natural language into tangible products in seconds.
+            Type what you imagine and TOBE instantly generates production-ready designs and purchase flows. Our AI transforms natural language into tangible products in seconds.
           </p>
         </div>
 
@@ -57,9 +61,26 @@ export const Phase1Section = () => {
           <h3 className="text-2xl md:text-3xl font-poppins font-bold text-foreground mb-6 text-center">
             See TOBE in Action
           </h3>
-          <p className="text-lg text-muted-foreground mb-4 text-center max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground mb-8 text-center max-w-3xl mx-auto">
             Experience the power of generative commerce. Type a prompt and watch as TOBE instantly creates production-ready designs with color variants and fulfillment options.
           </p>
+          
+          {/* Product Mockups Grid */}
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div className="rounded-2xl overflow-hidden border border-border/50 hover:border-primary/30 transition-all duration-300 hover-scale">
+              <img src={mockup1} alt="TOBE app showing phone case designs" className="w-full h-auto" />
+            </div>
+            <div className="rounded-2xl overflow-hidden border border-border/50 hover:border-primary/30 transition-all duration-300 hover-scale">
+              <img src={mockup2} alt="TOBE app showing hoodie design" className="w-full h-auto" />
+            </div>
+            <div className="rounded-2xl overflow-hidden border border-border/50 hover:border-primary/30 transition-all duration-300 hover-scale">
+              <img src={mockup3} alt="TOBE app product customization" className="w-full h-auto" />
+            </div>
+            <div className="rounded-2xl overflow-hidden border border-border/50 hover:border-primary/30 transition-all duration-300 hover-scale">
+              <img src={mockup4} alt="TOBE creator storefront interface" className="w-full h-auto" />
+            </div>
+          </div>
+          
           <p className="text-center text-primary font-medium">
             <strong>Try it:</strong> "vintage astronaut hoodie" or "modern abstract phone case" — see how TOBE transforms your imagination into purchasable products with real-time design generation and partner fulfillment.
           </p>
