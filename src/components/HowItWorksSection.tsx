@@ -1,23 +1,25 @@
-import { MessageSquare, Sparkles, Truck } from 'lucide-react';
+import { MessageSquare, Sparkles, Settings, ShoppingBag } from 'lucide-react';
 
 const steps = [
   {
     icon: MessageSquare,
-    title: "Just ask for it",
-    description: "Describe anything in natural language.",
-    detail: "Skip categories and filters—tell TOBE what you want."
+    title: "Tell TOBE What You Want",
+    description: "Type or use voice to describe your product or service need"
   },
   {
     icon: Sparkles,
-    title: "Your desires, instantly shoppable",
-    description: "See unique product options in seconds.",
-    detail: "TOBE creates personalized designs and mockups tailored to your request."
+    title: "AI Generates Options",
+    description: "Our AI creates designs and matches vendors from the ONDC network"
   },
   {
-    icon: Truck,
-    title: "Get it delivered",
-    description: "Order sustainably with zero inventory waste.",
-    detail: "Post Fulfillment Pipeline means no excess stock and minimal environmental impact."
+    icon: Settings,
+    title: "Customize & Compare",
+    description: "Adjust designs, compare prices, delivery times, and vendor ratings"
+  },
+  {
+    icon: ShoppingBag,
+    title: "Buy or Book",
+    description: "Complete purchase with on-demand fulfillment and tracking"
   }
 ];
 
@@ -27,14 +29,11 @@ export const HowItWorksSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-poppins font-bold gradient-text mb-6">
-            How It Works
+            How TOBE Works
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Three simple steps to transform your imagination into reality
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => (
             <div
               key={index}
@@ -52,14 +51,11 @@ export const HowItWorksSection = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-2xl font-poppins font-bold text-foreground mb-4">
+                <h3 className="text-xl font-poppins font-bold text-foreground mb-4">
                   {step.title}
                 </h3>
-                <p className="text-lg text-primary mb-4">
-                  {step.description}
-                </p>
                 <p className="text-muted-foreground">
-                  {step.detail}
+                  {step.description}
                 </p>
               </div>
 
