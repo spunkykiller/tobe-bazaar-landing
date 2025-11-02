@@ -1,4 +1,6 @@
 import { HeroSection } from '@/components/HeroSection';
+import { Navbar } from '@/components/Navbar';
+import { ScrollToTop } from '@/components/ScrollToTop';
 import { SupportersSection } from '@/components/SupportersSection';
 import { StatsSection } from '@/components/StatsSection';
 import { Phase1Section } from '@/components/Phase1Section';
@@ -15,7 +17,8 @@ import { Footer } from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background scroll-smooth">
+      <Navbar />
       <HeroSection />
       <SupportersSection />
       <StatsSection />
@@ -23,13 +26,18 @@ const Index = () => {
       <WhyTobeSection />
       <Phase2Section />
       <HowItWorksSection />
-      <FeaturesSection />
+      <section id="features">
+        <FeaturesSection />
+      </section>
       <ArchitectureSection />
-      <ImpactSection />
+      <section id="impact">
+        <ImpactSection />
+      </section>
       <FutureVisionSection />
       <CTASection />
       <ImpactStrip />
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };

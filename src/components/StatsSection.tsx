@@ -1,4 +1,8 @@
+import { useScrollAnimation } from '@/hooks/use-scroll-animation';
+
 export const StatsSection = () => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
+  
   const stats = [
     {
       value: "100+",
@@ -18,9 +22,9 @@ export const StatsSection = () => {
   ];
 
   return (
-    <section className="py-24 px-4 bg-primary/5 relative overflow-hidden">
+    <section ref={ref as React.RefObject<HTMLElement>} className="py-24 px-4 bg-primary/5 relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-4xl md:text-5xl font-poppins font-bold gradient-text mb-6">
             Transforming Commerce with AI
           </h2>
@@ -30,7 +34,8 @@ export const StatsSection = () => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="card-gradient rounded-3xl p-8 text-center border border-border/50 hover:border-primary/30 transition-all duration-300 hover-scale"
+              className={`card-gradient rounded-3xl p-8 text-center border border-border/50 hover:border-primary/30 transition-all duration-700 hover-scale ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              style={{ transitionDelay: `${index * 0.15}s` }}
             >
               <div className="text-5xl md:text-6xl font-poppins font-bold gradient-text mb-4">
                 {stat.value}

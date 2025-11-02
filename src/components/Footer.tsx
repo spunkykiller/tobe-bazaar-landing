@@ -35,7 +35,7 @@ const socialLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="border-t border-border/50 py-16 px-4">
+    <footer className="border-t border-border/50 py-16 px-4 bg-background/50 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto">
         
         {/* Main Footer Content */}
@@ -62,8 +62,10 @@ export const Footer = () => {
                 <a
                   key={index}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="w-10 h-10 rounded-full bg-card/50 border border-border/50 flex items-center justify-center hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 group"
+                  className="w-10 h-10 rounded-full bg-card/50 border border-border/50 flex items-center justify-center hover:border-primary/50 hover:bg-primary/10 hover:scale-110 transition-all duration-300 group"
                 >
                   <social.icon className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
                 </a>
@@ -82,7 +84,7 @@ export const Footer = () => {
                   <li key={linkIndex}>
                     <a
                       href={link.href}
-                      className="text-muted-foreground hover:text-primary transition-colors duration-300"
+                      className="text-muted-foreground hover:text-primary transition-colors duration-300 inline-block hover:translate-x-1"
                     >
                       {link.name}
                     </a>

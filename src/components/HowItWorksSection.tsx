@@ -1,4 +1,5 @@
 import { MessageSquare, Sparkles, Settings, ShoppingBag } from 'lucide-react';
+import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 
 const steps = [
   {
@@ -24,10 +25,12 @@ const steps = [
 ];
 
 export const HowItWorksSection = () => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
+
   return (
-    <section id="how-it-works" className="py-24 px-4 space-gradient space-particles relative overflow-hidden">
+    <section id="how-it-works" ref={ref as React.RefObject<HTMLElement>} className="py-24 px-4 space-gradient space-particles relative overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+        <div className={`text-center mb-16 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <h2 className="text-4xl md:text-6xl font-poppins font-bold gradient-text mb-6">
             How TOBE Works
           </h2>
@@ -37,7 +40,8 @@ export const HowItWorksSection = () => {
           {steps.map((step, index) => (
             <div
               key={index}
-              className="relative group hover-scale"
+              className={`relative group hover-scale transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              style={{ transitionDelay: `${index * 0.15}s` }}
             >
               <div className="card-gradient rounded-3xl p-8 text-center h-full border border-border/50 hover:border-primary/30 transition-all duration-300">
                 {/* Step number */}

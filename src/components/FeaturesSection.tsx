@@ -1,4 +1,5 @@
 import { Network } from 'lucide-react';
+import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 import generativeDesignIcon from '@/assets/generative-design-icon.svg';
 import semanticSearchIcon from '@/assets/semantic-search-icon.svg';
 import creatorStorefrontsIcon from '@/assets/creator-storefronts-icon.svg';
@@ -38,37 +39,45 @@ const features = [
 ];
 
 export const FeaturesSection = () => {
+  const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
+
   return (
-    <section className="py-24 px-4 space-gradient-light space-particles-dense relative overflow-hidden">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-poppins font-bold gradient-text mb-6">
+    <section ref={ref as React.RefObject<HTMLElement>} className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 space-gradient-light space-particles-dense relative overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        <div className={`text-center mb-16 sm:mb-20 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-poppins font-bold gradient-text-animated mb-6">
             Product Features
           </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Powerful capabilities that transform how you create, discover, and shop
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group hover-scale cursor-pointer"
+              className={`group card-hover cursor-pointer transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              style={{ transitionDelay: `${index * 0.1}s` }}
             >
-              <div className="card-gradient rounded-3xl p-8 h-full border border-border/50 hover:border-primary/30 transition-all duration-300 hover:glow-primary">
+              <div className="card-gradient rounded-3xl p-8 sm:p-10 h-full border border-border/50 hover:border-primary/40 transition-all duration-500 relative overflow-hidden">
+                {/* Shimmer effect on hover */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 shimmer pointer-events-none" />
                 
                 {/* Icon */}
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl gradient-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-2xl gradient-primary mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg">
                   {feature.iconType === 'image' ? (
-                    <img src={feature.iconSrc} alt={feature.title} className="h-8 w-8" />
+                    <img src={feature.iconSrc} alt={feature.title} className="h-8 w-8 sm:h-10 sm:w-10" />
                   ) : (
-                    <feature.icon className="h-8 w-8 text-primary-foreground" />
+                    <feature.icon className="h-8 w-8 sm:h-10 sm:w-10 text-primary-foreground" />
                   )}
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-poppins font-bold text-foreground mb-4">
+                <h3 className="text-xl sm:text-2xl font-poppins font-bold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                   {feature.description}
                 </p>
               </div>
