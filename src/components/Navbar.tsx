@@ -31,7 +31,7 @@ export const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        isScrolled || isMobileMenuOpen
           ? 'bg-background/95 backdrop-blur-md border-b border-border/50 shadow-lg'
           : 'bg-transparent'
       }`}
@@ -92,7 +92,7 @@ export const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden pb-6 border-t border-border/50 mt-4 pt-6 animate-in slide-in-from-top-5 duration-300">
+          <div className="md:hidden pb-6 border-t border-border/50 mt-4 pt-6 animate-in slide-in-from-top-5 duration-300 bg-background/95 backdrop-blur-md rounded-xl px-4">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link, index) => (
                 <button

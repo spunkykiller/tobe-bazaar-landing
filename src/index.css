@@ -406,6 +406,103 @@
     animation: gradientShift 3s ease infinite;
   }
 
+  /* Reusable animated gradient background for sections */
+  .animated-gradient-bg {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--primary) / 0.12),
+      transparent,
+      hsl(var(--secondary) / 0.12)
+    );
+    background-size: 200% 100%;
+    animation: gradientShift 6s ease infinite;
+    pointer-events: none;
+  }
+
+  /* Section edge fades to blend between sections */
+  .fade-edge-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    background: linear-gradient(to bottom, hsl(var(--background)) 0%, transparent 100%);
+    pointer-events: none;
+  }
+
+  /* Orbiting dotted circles background */
+  .orbit-dots {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .orbit-dots::before,
+  .orbit-dots::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 9999px;
+    border: 1px dashed hsl(var(--primary) / 0.25);
+    animation: spin 40s linear infinite;
+  }
+
+  .orbit-dots::before {
+    width: 44rem;
+    height: 44rem;
+  }
+
+  .orbit-dots::after {
+    width: 28rem;
+    height: 28rem;
+    border-color: hsl(var(--secondary) / 0.25);
+    animation-duration: 60s;
+  }
+
+  /* Orbiting star dots (subtle) */
+  .orbit-stars {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .orbit-stars::before,
+  .orbit-stars::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36rem;
+    height: 36rem;
+    border-radius: 9999px;
+    background:
+      radial-gradient(circle, rgba(255,255,255,0.6) 0 2px, transparent 3px) 0 0/40px 40px;
+    -webkit-mask: radial-gradient(circle, transparent calc(50% - 2px), #000 calc(50% - 1px), #000 calc(50% + 1px), transparent calc(50% + 2px));
+            mask: radial-gradient(circle, transparent calc(50% - 2px), #000 calc(50% - 1px), #000 calc(50% + 1px), transparent calc(50% + 2px));
+    animation: spin 50s linear infinite;
+    opacity: 0.3;
+  }
+  .orbit-stars::after {
+    width: 24rem;
+    height: 24rem;
+    background:
+      radial-gradient(circle, rgba(147, 51, 234, 0.5) 0 2px, transparent 3px) 0 0/34px 34px;
+    animation-duration: 70s;
+    opacity: 0.25;
+  }
+
+  .fade-edge-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background: linear-gradient(to top, hsl(var(--background)) 0%, transparent 100%);
+    pointer-events: none;
+  }
+
   /* Enhanced section spacing */
   section {
     scroll-margin-top: 80px;

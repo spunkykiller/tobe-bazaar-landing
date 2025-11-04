@@ -14,6 +14,7 @@ import { FutureVisionSection } from '@/components/FutureVisionSection';
 import { CTASection } from '@/components/CTASection';
 import { ImpactStrip } from '@/components/ImpactStrip';
 import { Footer } from '@/components/Footer';
+import FAQSection from '@/components/FAQSection';
 
 const Index = () => {
   return (
@@ -36,6 +37,7 @@ const Index = () => {
       <FutureVisionSection />
       <CTASection />
       <ImpactStrip />
+      <FAQSection />
       <Footer />
       <ScrollToTop />
     </div>

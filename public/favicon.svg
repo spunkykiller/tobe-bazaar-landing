@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <!-- Bag with leaf mark, white on black for strong contrast at small sizes -->
+  <rect width="256" height="256" rx="40" fill="#000000"/>
+  <!-- Bag body -->
+  <g fill="none" stroke="#ffffff" stroke-width="20" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M56 116c0-6 4-10 10-10h124c6 0 10 4 10 10l8 104c1 14-10 26-24 26H72c-14 0-25-12-24-26l8-104z"/>
+    <!-- Handle -->
+    <path d="M92 106v-10c0-30 22-52 56-52s56 22 56 52v10"/>
+  </g>
+  <!-- Leaf inside bag -->
+  <g fill="none" stroke="#ffffff" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" transform="translate(0,6)">
+    <path d="M146 196c-46 18-74-6-74-40c0-30 28-48 82-50c10 0 18 0 18 6c0 46-8 78-56 92z"/>
+    <path d="M108 206c10-28 30-46 60-64"/>
+  </g>
+</svg>
+

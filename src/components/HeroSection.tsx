@@ -143,7 +143,7 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center space-gradient space-particles overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center space-gradient space-particles overflow-hidden pt-20 pb-24 sm:pb-28">
       {/* Background */}
       <div 
         className="absolute inset-0 opacity-20 blur-sm"
