@@ -1,8 +1,8 @@
 import { Clock, Palette, Leaf } from 'lucide-react';
-import mockup1 from '@/assets/tobe-mockup-1.jpg';
+import mockup1 from '@/assets/modern abstract phone case.jpeg';
 import mockup2 from '@/assets/tobe-mockup-2.jpg';
-import mockup3 from '@/assets/tobe-mockup-3.jpg';
-import mockup4 from '@/assets/tobe-mockup-4.jpg';
+import mockup3 from '@/assets/vintage astronaut hoodie_3.jpeg';
+import mockup4 from '@/assets/vintage astronaut hoodie _2.jpeg';
 
 export const Phase1Section = () => {
   const features = [
@@ -68,16 +68,16 @@ export const Phase1Section = () => {
           {/* Product Mockups Grid */}
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <div className="rounded-2xl overflow-hidden border border-border/50 hover:border-primary/30 transition-all duration-300 hover-scale">
-              <img src={mockup1} alt="TOBE app showing phone case designs" className="w-full h-auto" />
+              <img src={mockup1} alt="Modern abstract phone case design" className="w-full h-auto" />
             </div>
             <div className="rounded-2xl overflow-hidden border border-border/50 hover:border-primary/30 transition-all duration-300 hover-scale">
               <img src={mockup2} alt="TOBE app showing hoodie design" className="w-full h-auto" />
             </div>
             <div className="rounded-2xl overflow-hidden border border-border/50 hover:border-primary/30 transition-all duration-300 hover-scale">
-              <img src={mockup3} alt="TOBE app product customization" className="w-full h-auto" />
+              <img src={mockup3} alt="Vintage astronaut hoodie design" className="w-full h-auto" />
             </div>
             <div className="rounded-2xl overflow-hidden border border-border/50 hover:border-primary/30 transition-all duration-300 hover-scale">
-              <img src={mockup4} alt="TOBE creator storefront interface" className="w-full h-auto" />
+              <img src={mockup4} alt="Vintage astronaut hoodie design variant" className="w-full h-auto" />
             </div>
           </div>
           
