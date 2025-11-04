@@ -511,4 +511,46 @@
       opacity: 0;
     }
   }
+
+  /* Supporters section gradient animation */
+  @keyframes supportersGradient {
+    0% {
+      background: linear-gradient(135deg, hsl(220 18% 8%) 0%, hsl(217 91% 10%) 30%, hsl(240 40% 12%) 60%, hsl(220 18% 8%) 100%);
+    }
+    25% {
+      background: linear-gradient(135deg, hsl(217 91% 10%) 0%, hsl(240 40% 12%) 30%, hsl(270 60% 15%) 60%, hsl(217 91% 10%) 100%);
+    }
+    50% {
+      background: linear-gradient(135deg, hsl(240 40% 12%) 0%, hsl(270 60% 15%) 30%, hsl(217 91% 10%) 60%, hsl(240 40% 12%) 100%);
+    }
+    75% {
+      background: linear-gradient(135deg, hsl(270 60% 15%) 0%, hsl(217 91% 10%) 30%, hsl(240 40% 12%) 60%, hsl(270 60% 15%) 100%);
+    }
+    100% {
+      background: linear-gradient(135deg, hsl(220 18% 8%) 0%, hsl(217 91% 10%) 30%, hsl(240 40% 12%) 60%, hsl(220 18% 8%) 100%);
+    }
+  }
+
+  .supporters-gradient-animated {
+    background: linear-gradient(135deg, hsl(220 18% 8%) 0%, hsl(217 91% 10%) 30%, hsl(240 40% 12%) 60%, hsl(220 18% 8%) 100%);
+    animation: supportersGradient 15s ease-in-out infinite;
+  }
+
+  /* Supporters image container with subtle hover effect */
+  .supporters-image-container {
+    transition: var(--transition-smooth);
+    filter: drop-shadow(0 10px 30px rgba(59, 130, 246, 0.15));
+  }
+
+  .supporters-image-container:hover {
+    transform: translateY(-4px);
+    filter: drop-shadow(0 20px 40px rgba(59, 130, 246, 0.25));
+  }
+
+  /* Mobile optimizations for supporters section */
+  @media (max-width: 640px) {
+    .supporters-image-container {
+      padding: 0;
+    }
+  }
 }
